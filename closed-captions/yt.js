@@ -59,7 +59,7 @@ function updateTimerDisplay(){
 			updateTimerDisplay();
 		}, 100);
 	}
-	
+
 }
 function pTimes(num,startT,endT,curT) {
 	var curP = document.querySelector('.p' + num);
@@ -135,4 +135,3 @@ function sTimes(num,soundStarts,curT) {
 		};
 	}
 })();
-

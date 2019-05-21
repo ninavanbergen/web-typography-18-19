@@ -9,6 +9,10 @@ Feel free to adjust the defaults to your needs.
 	opacity: 0;
 	transition: .05s;
 	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	margin-top: 3rem;
+	z-index: 999;
 }
 #closed-captions .on {
 	opacity: 1;
@@ -17,80 +21,688 @@ Feel free to adjust the defaults to your needs.
 	transition: .2s;
 	opacity: 0;
 }
-.voice1 {
-	font-style: italic;
+
+
+body {
+	background-image: url(achtergrondjevb.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+}
+
+iframe {
+	margin: auto;
+	z-index: 1;
+	margin-top: 12vw;
 }
 
 /* **********************************************
-The first paragraph, with extended timing for 
+The first paragraph, with extended timing for
 	all siblings. Basically what it does is that
-	it shows the text after a delay, which 
+	it shows the text after a delay, which
 	corresponds with the time that the word is
 	spoken.
 You probably want to change the styling.
 ********************************************** */
-.p0 span {
-	opacity: 0;
-	font-family: brenner;
+
+
+
+
+/******************** VOICE 1 ********************/
+
+/* zwarte achtrgrond tint */
+.zwartbk {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	z-index: 0;
+	opacity: 0.8;
 }
+
+/* dubbele zwarte achtergrond voor piep */
+.dubbelzwart {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	opacity: 0;
+}
+
+/* .sound0. article img {
+	animation: hartklopping 60s;
+}
+
+@keyframes hartklopping {
+	0% {
+		opacity: 0.8;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.8;
+	}
+} */
+
+/* Geluid 1 in het begin, tint achtergrond knippert */
+.sound0 article img {
+	animation: schaduw 1s;
+}
+
+@keyframes schaduw {
+	0% {
+		opacity: 0.8;
+	}
+	10% {
+		opacity: 1;
+	}
+	20% {
+		opacity: 0.8;
+	}
+	30% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 0.8;
+	}
+	50% {
+		opacity: 1;
+	}
+	60% {
+		opacity: 0.8;
+	}
+	70% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 0.8;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* tint achtergrond knippert bij geluid 2 */
+.sound1 article img {
+	animation: schaduwsnel 2s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes schaduwsnel {
+	0% {
+		opacity: 0.8;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.8;
+	}
+}
+
+
+/* ledlamp gegevens */
+.ledlamp {
+	width: 30%;
+	opacity: 0;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	margin-top: 0.5vw;
+}
+
+/* ledlamp gegevens voor knipperen bij sound4 */
+.sound4 > img {
+	opacity: 0;
+	animation: lampje 1s;
+}
+
+/* tint achtergrond knippert bij sound4 de piep*/
+.sound4 article img {
+	opacity: 0.8;
+	animation: lampje 1s;
+}
+
+@keyframes lampje {
+	0% {
+		opacity: 0.8;
+	}
+	10% {
+		opacity: 1;
+	}
+	20% {
+		opacity: 0.8;
+	}
+	30% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 0.8;
+	}
+	50% {
+		opacity: 1;
+	}
+	60% {
+		opacity: 0.8;
+	}
+	70% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 0.8;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+/* ifram trilt tijdens sound4 */
+.sound4 iframe {
+	animation: shake 1s linear 1 forwards;
+}
+
+@keyframes shake {
+	10% {
+		transform: translate(0,0);
+	}
+	20% {
+		transform: translate(1vw, 1vw);
+	}
+	30% {
+		transform: translate(0,0);
+	}
+	40% {
+		transform: translate(1vw, 1vw);
+	}
+	50% {
+		transform: translate(0,0);
+	}
+	60% {
+		transform: translate(1vw, 1vw);
+	}
+	70% {
+		transform: translate(0,0);
+	}
+	80% {
+		transform: translate(1vw, 1vw);
+	}
+	90% {
+		transform: translate(0,0);
+	}
+	100% {
+		transform: translate(1vw, 1vw);
+	}
+}
+
+.sound5 article img {
+	animation: schaduwsneltwee 2s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes schaduwsneltwee {
+	0% {
+		opacity: 0.8;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.8;
+	}
+}
+
+/* tweede piep sound7 led lamp */
+.sound7 > img {
+	opacity: 0;
+	animation: lampjee 0.7s;
+}
+
+/* tweede piep sound7 tint achtergrond */
+.sound7 article img {
+	opacity: 0.8;
+	animation: lampjee 0.7s;
+}
+
+
+@keyframes lampjee {
+	0% {
+		opacity: 0.8;
+	}
+	10% {
+		opacity: 1;
+	}
+	20% {
+		opacity: 0.8;
+	}
+	30% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 0.8;
+	}
+	50% {
+		opacity: 1;
+	}
+	60% {
+		opacity: 0.8;
+	}
+	70% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 0.8;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.sound8 article img {
+	animation: schaduwsneldrie 2s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes schaduwsneldrie {
+	0% {
+		opacity: 0.8;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.8;
+	}
+}
+
+.sound9 > img {
+	opacity: 0;
+	animation: lampjenegen 0.7s;
+}
+
+/* tweede piep sound7 tint achtergrond */
+.sound9 article img {
+	opacity: 0.8;
+	animation: lampjenegen 0.7s;
+}
+
+
+@keyframes lampjenegen {
+	0% {
+		opacity: 0.8;
+	}
+	10% {
+		opacity: 1;
+	}
+	20% {
+		opacity: 0.8;
+	}
+	30% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 0.8;
+	}
+	50% {
+		opacity: 1;
+	}
+	60% {
+		opacity: 0.8;
+	}
+	70% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 0.8;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.sound10 article img {
+	animation: schaduwsnelvier 2s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes schaduwsnelvier {
+	0% {
+		opacity: 0.8;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.8;
+	}
+}
+
+.sound11 article img {
+	opacity: 0.8;
+	animation: lampje11 0.7s;
+}
+
+@keyframes lampje11 {
+	0% {
+		opacity: 0.8;
+	}
+	10% {
+		opacity: 1;
+	}
+	20% {
+		opacity: 0.8;
+	}
+	30% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 0.8;
+	}
+	50% {
+		opacity: 1;
+	}
+	60% {
+		opacity: 0.8;
+	}
+	70% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 0.8;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.sound12 > img {
+	opacity: 0;
+	animation: lampje11 0.7s;
+}
+
+@keyframes lampje11 {
+	0% {
+		opacity: 0.8;
+	}
+	10% {
+		opacity: 1;
+	}
+	20% {
+		opacity: 0.8;
+	}
+	30% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 0.8;
+	}
+	50% {
+		opacity: 1;
+	}
+	60% {
+		opacity: 0.8;
+	}
+	70% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 0.8;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.sound11 div img {
+	z-index: 888;
+	opacity: 0.1;
+	animation: langepiep 42s;
+}
+
+@keyframes langepiep {
+	0% {
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/***********************************************/
+
+
+
+
+/******************** VOICE 1 ********************/
+
+/* stem 1 computer */
+.voice1 {
+	color: limegreen;
+	font-family: "Brenner Mono";
+	font-style: Normal;
+	font-weight: 400;
+	font-size: 20px;
+	opacity: 0;
+}
+
+/* stem 1 computer */
+ .voice1 {
+	 background-color: black;
+	 box-shadow: 2px 2px rgba(255, 255, 255, 0.3);
+	 overflow: hidden; /* Ensures the content is not revealed until the animation */
+	 border-right: .15em solid orange; /* The typwriter cursor */
+	 white-space: nowrap; /* Keeps the content on a single line */
+	 margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+	 letter-spacing: .15em; /* Adjust as needed */
+	 animation:
+    typing 3.5s steps(30, end),
+    blinking-cursor .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blinking-cursor {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+/***********************************************/
+
+
+
+
+/******************** VOICE 2 ********************/
+
+.voice2 {
+	font-family: "Brenner Sans";
+	font-style: italic;
+	font-weight: 400;
+	color: white;
+	font-size: 20px;
+}
+
+/* .voice2 {
+	padding: 0.5rem;
+} */
+
+
+/***********************************************/
+
+/******************** VOICE 3 ********************/
+
+.voice4 {
+	font-family: "Brenner Sans";
+	font-weight: 800;
+	color: rgba(255,255,255, 0.5);
+	font-size: 50px;
+	text-transform: uppercase;
+}
+
+/* .voice2 {
+	padding: 0.5rem;
+} */
+
+
+/***********************************************/
+
+
+
+/******************** TEXT ********************/
+
 .p0.on span:first-of-type {
 	opacity: 1;
 	transition: 0s;
-	font-weight: 200;
 }
 .p0.on span:nth-of-type(2) {
 	opacity: 1;
 	transition: 0s .4s;
-	margin-right: -.25em;
-	font-weight: 400;
 }
 .p0.on span:nth-of-type(3) {
 	opacity: 1;
 	transition: 0s .5s;
-	margin-right: -.25em;
-	font-weight: 600;
 }
 .p0.on span:nth-of-type(4) {
 	opacity: 1;
 	transition: 0s .7s;
-	margin-right: -.25em;
-	font-weight: 800;
 }
 .p0.on span:nth-of-type(5) {
 	opacity: 1;
 	transition: 0s 1.1s;
-	margin-right: -.25em;
-	font-family: "brenner sans";
 }
 .p0.on span:nth-of-type(6) {
 	opacity: 1;
 	transition: 0s 1.4s;
-	margin-right: -.25em;
-	font-family: "brenner display";
 }
 .p0.on span:nth-of-type(7) {
 	opacity: 1;
 	transition: 0s 1.7s;
-	margin-right: -.25em;
-	font-family: "brenner script";
 }
 .p0.on span:nth-of-type(8) {
 	opacity: 1;
 	transition: 0s 2s;
-	font-family: "brenner script";
 }
 .p0.on span:nth-of-type(9) {
 	opacity: 1;
 	transition: 0s 3s;
-	font-family: "brenner Sans condensed";
 }
 .p0.on span:nth-of-type(10) {
 	opacity: 1;
 	transition: 0s 3.2s;
-	font-family: "brenner mono";
 }
 .p0.on span:nth-of-type(11) {
 	opacity: 1;
 	transition: 0s 3.7s;
-	font-family: "brenner slab";
 }
+
+.p1.on span:first-of-type {
+	font-family: "Brenner Sans";
+	font-weight: 800;
+	color: rgba(0,255,0, 0.4);
+	margin-left: 26vw;
+	font-size: 100px;
+	text-transform: uppercase;
+}
+
+
+#cells1 {
+	font-size: 40px;
+	margin-left: -15vw;
+	text-transform: uppercase;
+}
+
+#interlinked1 {
+	font-size: 40px;
+	margin-left: -15vw;
+	text-transform: uppercase;
+}
+
+#cells2 {
+	font-family: "Brenner Sans";
+	font-weight: 800;
+	color: rgba(255,255,255, 0.4);
+	margin-left: 26vw;
+	font-size: 100px;
+	text-transform: uppercase;
+}
+
+#interlinked2 {
+	font-family: "Brenner Sans";
+	font-weight: 800;
+	color: rgba(0,0,255, 0.4);
+	margin-left: 26vw;
+	font-size: 100px;
+	text-transform: uppercase;
+}
+
+#fuck {
+	position: absolute;
+	z-index: 0;
+	top: 17vw;
+	font-family: "Brenner Sans";
+	font-weight: 800;
+	color: rgba(255,0,0, 0.4);
+	margin-left: -30vw;
+	font-size: 90px;
+	width: 25%;
+	text-transform: uppercase;
+}
+
+#withinfirst {
+	font-family: "Brenner Sans";
+	font-weight: 800;
+	color: rgba(255,255,255, 0.4);
+	margin-left: 26vw;
+	font-size: 50px;
+	text-transform: uppercase;
+}
+
+#withinsecond {
+	font-family: "Brenner Sans";
+	font-weight: 800;
+	color: rgba(255,255,255, 0.7);
+	margin-left: 26vw;
+	font-size: 50px;
+	text-transform: uppercase;
+}
+
+#withinthird {
+	font-family: "Brenner Sans";
+	font-weight: 800;
+	color: rgba(255,255,255, 1);
+	margin-left: 26vw;
+	font-size: 50px;
+	text-transform: uppercase;
+}
+
+/***********************************************/
