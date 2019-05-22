@@ -316,7 +316,23 @@ You probably want to change the styling.
 	}
 }
 
-.sound8 article img {
+.sound8 iframe {
+	animation: shakey 0.5s linear forwards;
+}
+
+@keyframes shakey {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.sound9 article img {
 	animation: schaduwsneldrie 2s;
 	animation-iteration-count: infinite;
 }
@@ -333,13 +349,13 @@ You probably want to change the styling.
 	}
 }
 
-.sound9 > img {
+.sound10 > img {
 	opacity: 0;
 	animation: lampjenegen 0.7s;
 }
 
 /* tweede piep sound7 tint achtergrond */
-.sound9 article img {
+.sound10 article img {
 	opacity: 0.8;
 	animation: lampjenegen 0.7s;
 }
@@ -381,7 +397,7 @@ You probably want to change the styling.
 	}
 }
 
-.sound10 article img {
+.sound11 article img {
 	animation: schaduwsnelvier 2s;
 	animation-iteration-count: infinite;
 }
@@ -398,7 +414,7 @@ You probably want to change the styling.
 	}
 }
 
-.sound11 article img {
+.sound12 article img {
 	opacity: 0.8;
 	animation: lampje11 0.7s;
 }
@@ -439,7 +455,7 @@ You probably want to change the styling.
 	}
 }
 
-.sound12 > img {
+.sound13 > img {
 	opacity: 0;
 	animation: lampje11 0.7s;
 }
@@ -480,10 +496,10 @@ You probably want to change the styling.
 	}
 }
 
-.sound11 div img {
+.sound12 .dubbelbk img {
 	z-index: 888;
 	opacity: 0.1;
-	animation: langepiep 42s;
+	animation: langepiep 43.9s;
 }
 
 @keyframes langepiep {
@@ -495,6 +511,23 @@ You probably want to change the styling.
 	}
 }
 
+.whitebk {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	opacity: 0;
+}
+
+.sound14 .whitebk {
+	opacity: 0.8;
+}
+
+
 /***********************************************/
 
 
@@ -503,7 +536,7 @@ You probably want to change the styling.
 /******************** VOICE 1 ********************/
 
 /* stem 1 computer */
-.voice1 {
+.voice1, .voice4 {
 	color: limegreen;
 	font-family: "Brenner Mono";
 	font-style: Normal;
@@ -513,7 +546,7 @@ You probably want to change the styling.
 }
 
 /* stem 1 computer */
- .voice1 {
+ .voice1, .voice4 {
 	 background-color: black;
 	 box-shadow: 2px 2px rgba(255, 255, 255, 0.3);
 	 overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -540,43 +573,16 @@ You probably want to change the styling.
 /***********************************************/
 
 
-
-
 /******************** VOICE 2 ********************/
 
 .voice2 {
-	font-family: "Brenner Sans";
+	font-family: "Brenner Sans Bold";
 	font-style: italic;
-	font-weight: 400;
-	color: white;
-	font-size: 20px;
+	font-weight: 300;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 25px;
 }
-
-/* .voice2 {
-	padding: 0.5rem;
-} */
-
-
 /***********************************************/
-
-/******************** VOICE 3 ********************/
-
-.voice4 {
-	font-family: "Brenner Sans";
-	font-weight: 800;
-	color: rgba(255,255,255, 0.5);
-	font-size: 50px;
-	text-transform: uppercase;
-}
-
-/* .voice2 {
-	padding: 0.5rem;
-} */
-
-
-/***********************************************/
-
-
 
 /******************** TEXT ********************/
 
@@ -634,6 +640,40 @@ You probably want to change the styling.
 	text-transform: uppercase;
 }
 
+.p4 span:nth-of-type(5){
+	letter-spacing: -0.1rem;
+	color: rgba(255,255,255, 1);
+}
+
+.p5 span:first-of-type{
+	letter-spacing: -0.1rem;
+	color: rgba(255,255,255, 1);
+}
+
+.p5 span:nth-of-type(4){
+	letter-spacing: -0.1rem;
+	color: rgba(255,255,255, 1);
+}
+
+.p39 span:nth-of-type(3) {
+	letter-spacing: -0.4rem;
+	color: rgba(255,255,255, 1);
+}
+
+.p41 span:nth-of-type(3) {
+	letter-spacing: -0.4rem;
+	color: rgba(255,255,255, 1);
+}
+
+.p42 span:nth-of-type(3) {
+	letter-spacing: -0.4rem;
+	color: rgba(255,255,255, 1);
+}
+
+.p43 span:nth-of-type(3) {
+	letter-spacing: -0.4rem;
+	color: rgba(255,255,255, 1);
+}
 
 #cells1 {
 	font-size: 40px;
@@ -650,7 +690,7 @@ You probably want to change the styling.
 #cells2 {
 	font-family: "Brenner Sans";
 	font-weight: 800;
-	color: rgba(255,255,255, 0.4);
+	color: white;
 	margin-left: 26vw;
 	font-size: 100px;
 	text-transform: uppercase;
@@ -659,10 +699,11 @@ You probably want to change the styling.
 #interlinked2 {
 	font-family: "Brenner Sans";
 	font-weight: 800;
-	color: rgba(0,0,255, 0.4);
-	margin-left: 26vw;
-	font-size: 100px;
+	color: white;
+	margin-left: 20vw;
+	font-size: 80px;
 	text-transform: uppercase;
+	/* letter-spacing: -0.6rem; */
 }
 
 #fuck {
@@ -671,18 +712,80 @@ You probably want to change the styling.
 	top: 17vw;
 	font-family: "Brenner Sans";
 	font-weight: 800;
-	color: rgba(255,0,0, 0.4);
 	margin-left: -30vw;
-	font-size: 90px;
+	font-size: 50px;
 	width: 25%;
 	text-transform: uppercase;
 }
+
+.p6.on  {
+		animation: tekstbounce 0.5s ease-in-out;
+		margin-left: -40vw;
+		color: rgba(255,0,0,0.4);
+}
+
+@keyframes tekstbounce {
+	0% {
+		transform: scale(1);
+		}
+	50% {
+		transform: scale(1.5);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.p20.on {
+	animation: letters 0.3s ease-in forwards;
+	letter-spacing: normal;
+}
+
+.p23.on {
+	animation: letters 0.3s ease-in forwards;
+	letter-spacing: normal;
+}
+
+.p26.on {
+	animation: letters 0.3s ease-in forwards;
+	letter-spacing: normal;
+}
+
+.p29.on {
+	animation: letters 0.3s ease-in forwards;
+	letter-spacing: normal;
+}
+
+.p31.on {
+	animation: letters 0.3s ease-in forwards;
+	letter-spacing: normal;
+}
+
+.p34.on {
+	animation: letters 0.3s ease-in forwards;
+	letter-spacing: normal;
+}
+
+.p37.on {
+	animation: letters 0.3s ease-in forwards;
+	letter-spacing: normal;
+}
+
+@keyframes letters {
+	from {
+		letter-spacing: normal;
+	}
+	to {
+		letter-spacing: -0.6rem;
+	}
+}
+
 
 #withinfirst {
 	font-family: "Brenner Sans";
 	font-weight: 800;
 	color: rgba(255,255,255, 0.4);
-	margin-left: 26vw;
+	margin-left: 20vw;
 	font-size: 50px;
 	text-transform: uppercase;
 }
@@ -691,8 +794,8 @@ You probably want to change the styling.
 	font-family: "Brenner Sans";
 	font-weight: 800;
 	color: rgba(255,255,255, 0.7);
-	margin-left: 26vw;
-	font-size: 50px;
+	margin-left: 20vw;
+	font-size: 53px;
 	text-transform: uppercase;
 }
 
@@ -700,8 +803,8 @@ You probably want to change the styling.
 	font-family: "Brenner Sans";
 	font-weight: 800;
 	color: rgba(255,255,255, 1);
-	margin-left: 26vw;
-	font-size: 50px;
+	margin-left: 20vw;
+	font-size: 56px;
 	text-transform: uppercase;
 }
 
